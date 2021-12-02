@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "title": "e-commerce threat codel",
+    "owner": "RT"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Product Catalog",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Sam"
+  }
+}
