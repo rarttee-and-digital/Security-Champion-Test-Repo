@@ -9,7 +9,268 @@
       {
         "title": "Product Catalog",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "angle": 0,
+              "id": "1b7eff0c-18cf-446a-a34b-a47acd51a847",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "user"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 466,
+                "y": 78
+              },
+              "angle": 0,
+              "id": "53d242e7-fa9b-4773-95ae-aed522112fa0",
+              "z": 2,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Somebody altering the product data"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "get Featured\nProducts"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 705,
+                "y": 73
+              },
+              "angle": 0,
+              "id": "605256df-c77c-442a-a722-b6d62e38ebb2",
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "commercetools\nAPI"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1077,
+                "y": 111
+              },
+              "angle": 0,
+              "id": "e2bc96e9-bf01-4449-95dd-2f2c5ab55716",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Commercetools PIM"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1b7eff0c-18cf-446a-a34b-a47acd51a847"
+              },
+              "target": {
+                "id": "53d242e7-fa9b-4773-95ae-aed522112fa0"
+              },
+              "vertices": [
+                {
+                  "x": 242,
+                  "y": 174
+                },
+                {
+                  "x": 273,
+                  "y": 168
+                },
+                {
+                  "x": 354,
+                  "y": 152
+                },
+                {
+                  "x": 438,
+                  "y": 134
+                }
+              ],
+              "id": "e7d241eb-10cf-4f8c-a163-202538f98afd",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5427756746651871,
+                    "offset": 0.8395897417364186
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Https Get",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "protocol": "https",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "605256df-c77c-442a-a722-b6d62e38ebb2"
+              },
+              "target": {
+                "id": "e2bc96e9-bf01-4449-95dd-2f2c5ab55716"
+              },
+              "vertices": [],
+              "id": "d186d64d-f0a8-4934-a39d-673098c31c63",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "get products",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "53d242e7-fa9b-4773-95ae-aed522112fa0"
+              },
+              "target": {
+                "id": "605256df-c77c-442a-a722-b6d62e38ebb2"
+              },
+              "vertices": [],
+              "id": "b3819c73-06df-4633-962c-b4aba10af12f",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "get external",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 8,
+              "hasOpenThreats": false,
+              "protocol": "https",
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "id": "53d242e7-fa9b-4773-95ae-aed522112fa0"
+              },
+              "target": {
+                "id": "605256df-c77c-442a-a722-b6d62e38ebb2"
+              },
+              "vertices": [],
+              "id": "1581bbb7-0777-494e-a3c3-0322ded340f3",
+              "z": 9,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 2070
+        }
       }
     ],
     "reviewer": "Sam"
